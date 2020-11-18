@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+    <head>
+        <style>
+            h2{
+                text-align: center;
+                font-family: Algerian;
+                font-style: italic;
+                font-size: 60px;
+            }
+            
+            table
+            {
+               
+               background-color:grey;
+            }
+            body
+            {
+                background-image: url(E:\j1.jpg);
+               
+            }
+            #f1
+            {
+                position: absolute;
+                 margin: auto;
+                top:0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+               
+            }
+            table,td
+            {
+                margin: 3px;
+                font-size: 25px;
+                padding: 2px 3px 4px 4px;
+                
+                
+            }
+            txt1
+            {
+               
+            }
+        </style>
+        <title>Calculator</title>
+        <script type="text/javascript">
+            function display(n1)
+            {
+                f.text1.value=f.text1.value+n1;
+            }
+            function clear()
+            {
+                f.text1.value='';
+            }
+            function clearall()
+            {
+               var l= document.f.text1.value;
+               document.f.text1.value=l.substring(0,l.length-1);
+               
+            }
+//        b=document.getElementById('b1').value; 
+//        t=document.getElementById('txt1');
+//        t.value=document.write(b);
+        </script>
+        
+    </head>
+    <body>
+        <h2>MY CALCULATOR</h2> 
+        
+                <form id="f1"name="f">
+        <div id="d1">
+        <table>
+            <tr> <td colspan="2"><input type="button" name="clear" value="CLEAR" onclick="f.text1.value=''"></td>
+             <td colspan="2"><input type="button" name="backspace" value="BACKSPACE" onclick="clearall()"></td></tr>
+            <tr>
+                <!--<input cols="9" id="txt1" type="textarea" name="text1">-->
+            <textarea rows="1"cols="24" id="txt1" name="text1"></textarea>
+                </tr>
+                <tr>
+                <td>
+            <input id="b1" type="button" name="b1" value="1" onclick= "display(b1.value)"></td>  
+                <td><input id="b2" type="button" name="b2" value="2"onclick="display(b2.value)"> </td>
+                <td><input type="button" name="b3" value="3"onclick="display(b3.value)"></td>
+                <td><input type="button" name="divide" value="/" onclick="display(divide.value)"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="b4" value="4"onclick="display(b4.value)"></td> 
+                    <td><input type="button" name="b5" value="5"onclick="display(b5.value)"> </td>
+                    <td> <input type="button" name="b6" value="6"onclick="display(b6.value)"></td>
+                    <td><input type="button" name="mult" value="*"onclick="display(mult.value)"></td>
+                </tr>
+                <tr>
+        <td><input type="button" name="b7" value="7"onclick="display(b7.value)"></td>
+        <td> <input type="button" name="b8" value="8"onclick="display(b8.value)"></td> 
+        <td> <input type="button" name="b9" value="9"onclick="display(b9.value)"></td>
+        <td><input type="button" name="subt" value="-"onclick="display(subt.value)"></td>
+                </tr>
+                <tr>
+                   
+        <td> <input type="button" name="dec" value="."onclick="display(dec.value)"></td>
+        <td><input type="button" name="b0" value="0"onclick="display(b0.value)"> </td>
+        <td><input type="button"  name="add" value="+" onclick= "display(add.value)"></td>
+        <td><input type="button" name="eq" value="=" onclick="txt1.value=eval(txt1.value)"></td>
+       </tr>
+        </table>
+        </div>
+        </form>
+                
+        
+    </body>
+</html>
